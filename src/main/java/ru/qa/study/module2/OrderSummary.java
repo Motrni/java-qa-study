@@ -13,13 +13,17 @@ public class OrderSummary {
 
         double totalBuy = count * price;
         //System.out.println(totalBuy);
-        double discountGoods = Math.round((price/100) * discount);
+        double discountGoods = ((price/100) * discount);
         //System.out.println(discountGoods);
-        double totalPrice = totalBuy - discountGoods;
+        double totalPrice = totalBuy - 3*discountGoods;
         //System.out.println(totalPrice);
 
-        System.out.println("Приобретен товар: " + name + " В колличестве: " + count + "шт.");
-        System.out.println("Цена составила: "+ totalPrice + " " + valuta + " " + "Сидка составила: " + discountGoods + " " + valuta);
+        double discount2 = (discount/100);
+        System.out.println(discount2);
+
+        System.out.println("Приобретен товар: " + name + " В колличестве: " + count + " шт.");
+        System.out.println("Цена составила: "+ totalPrice + " " + valuta + " " + "Скидка составила: " + discountGoods + " " + valuta);
+        System.out.println("Цена одного товара: " + price);
         System.out.println("Промокод: " + promoCode + ". Процент скидки: " + discount);
     }
 }
