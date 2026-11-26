@@ -7,6 +7,6 @@ public class EnvironmentCheck {
 
         System.out.print("Status: ");
         System.out.println("READY");
-        System.out.println("Syced via MacBook");
+        System.out.println("Syced via MacBook123");
     }
 }
