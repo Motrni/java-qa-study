@@ -6,24 +6,20 @@ public class OrderSummary {
         int count = 3;
         double price = 4999.50;
         int discount = 15;
-        char valuta = '$';
+        char currency = '$';
         boolean isPaid = true;
         String promoCode = null;
         final int MAX_ITEMS = 10;
 
         double totalBuy = count * price;
-        //System.out.println(totalBuy);
-        double discountGoods = ((price/100) * discount);
-        //System.out.println(discountGoods);
-        double totalPrice = totalBuy - 3*discountGoods;
-        //System.out.println(totalPrice);
+        double discountGoods = ((totalBuy/100) * discount);
+        double totalPrice = totalBuy - discountGoods;
 
-        double discount2 = (discount/100);
-        System.out.println(discount2);
 
-        System.out.println("Приобретен товар: " + name + " В колличестве: " + count + " шт.");
-        System.out.println("Цена составила: "+ totalPrice + " " + valuta + " " + "Скидка составила: " + discountGoods + " " + valuta);
-        System.out.println("Цена одного товара: " + price);
+        System.out.println("Приобретен товар: " + name + " В количестве: " + count + " шт. (максимум в заказе: " + MAX_ITEMS + " шт.)");
+        System.out.println("Цена одного товара: " + price + " Общая цена без скидки: " + totalBuy + " " + currency);
+        System.out.println("Цена составила: "+ totalPrice + " " + currency + " Скидка составила: " + discountGoods + " " + currency);
         System.out.println("Промокод: " + promoCode + ". Процент скидки: " + discount);
+        System.out.println("Оплата прошла: " + isPaid);
     }
 }
